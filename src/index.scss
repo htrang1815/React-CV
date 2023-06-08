@@ -1,0 +1,217 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  font-size: inherit;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+input,
+textarea,
+button {
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.boxshadow {
+  box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+}
+.transitionhover {
+  transition: all ease 0.2s;
+}
+.profile-image {
+  clip-path: polygon(0 9%, 100% 0, 100% 94%, 0% 100%);
+}
+ul.profile-information li {
+  border-left: solid 2px #eee;
+  padding: 0 0 23px 20px;
+  font-size: 14px;
+  color: #787878;
+}
+ul.profile-information li:first-child img {
+  margin: -44px -44px;
+  display: inline-block;
+  position: absolute;
+  width: 25px;
+}
+ul.profile-information li:first-child {
+  padding-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+}
+ul.profile-information li:first-child:before {
+  margin-left: -51px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+  position: relative;
+  border: 0;
+  background: #ffc500;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  box-shadow: 0px 2px 32px 0px rgba(4, 123, 248, 0.3);
+}
+ul.profile-information li:before {
+  content: "";
+  border: solid 2px #ffc500;
+  width: 7px;
+  height: 7px;
+  -webkit-border-radius: 50px;
+  font-size: 8px;
+  margin-left: -25px;
+  margin-top: 1px;
+  font-weight: 400;
+  background: #fff;
+  display: block;
+  position: absolute;
+}
+ul.profile-information li:first-child:after {
+  background: url(../../my-cv/public/assets/glasses.png) no-repeat;
+  content: "";
+  width: 30px;
+  height: 10px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 16px -15px;
+  background-size: 27px 10px;
+}
+ul.profile-information li:last-child {
+  border: 0;
+  margin-left: 2px;
+  margin-top: -2px;
+}
+.site-btn.icon i {
+  color: #000;
+  background: #fff;
+  margin-left: 15px;
+  border-radius: 50px;
+  font-size: 11px;
+  height: 27px;
+  width: 27px;
+  float: right;
+  text-align: center;
+  line-height: 29px;
+  margin-top: 4px;
+}
+.service .icon i:before {
+  font-size: 44px;
+  margin-left: 0;
+}
+.timeline li {
+  border-left: solid 2px #eee;
+}
+.timeline li:first-child i {
+  background: #ffc500;
+  padding: 18px 18px;
+  font-size: 16px;
+  border-radius: 100rem;
+  margin: -13px -28px;
+}
+.timeline li:not(:first-child)::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border: 2px solid #ffc500;
+  border-radius: 100rem;
+  position: absolute;
+  margin-top: 6px;
+  left: -4px;
+}
+.timeline li:first-child h2 {
+  margin-left: 12px;
+}
+.timeline li:last-child {
+  border: none;
+}
+#portfolio {
+  .wrapper-item .item:hover .icon {
+    visibility: visible;
+    top: 35%;
+  }
+  .wrapper-item:hover {
+    background: #fff;
+  }
+}
+#contact {
+  .site-form .site-input {
+    border-bottom: solid 1px #dfdfdf;
+  }
+  .site-form .site-area {
+    border-bottom: solid 1px #dfdfdf;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .content__left {
+    width: 100%;
+  }
+  ul.profile-information {
+    margin: 0 auto 30px;
+    display: table;
+  }
+  .bar {
+    height: 71px;
+    margin-top: 30px;
+    border-radius: 6px;
+  }
+  .bar-tabs li:first-child {
+    height: 100%;
+  }
+  .bars-icon {
+    border-left: solid 1px #eaeaea;
+  }
+  .bar-tabs li:not(:first-child) {
+    display: none;
+  }
+  .content__right {
+    width: 100%;
+  }
+  .content__right .content {
+    margin-top: 30px;
+  }
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .service-item {
+    width: 100%;
+  }
+  .footer {
+    justify-content: center;
+  }
+  .footer .name {
+    display: none;
+  }
+  .bar-dynamic .site-btn {
+    display: none;
+  }
+  .bars-icon {
+    display: block;
+    font-size: 20px;
+    margin-right: 10px;
+    line-height: 71px;
+    border-left: solid 1px #eaeaea;
+    padding-left: 21px;
+  }
+}
